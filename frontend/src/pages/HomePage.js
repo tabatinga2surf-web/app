@@ -421,19 +421,42 @@ const HomePage = () => {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-16" data-testid="news-section">
-        <h2 className="text-3xl font-bold mb-8 text-center">Últimas Notícias do Surf</h2>
-        {news.length > 0 && !news[0].error ? (
+        <h2 className="text-3xl font-bold mb-2 text-center">Notícias do Mundo Aquático</h2>
+        <p className="text-center text-muted-foreground mb-8">Surf, Bodyboard e Mergulho</p>
+        {news.length > 0 && !news.error ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {news.slice(0, 3).map((item, index) => (
-              <Card key={index} className="glass-card border-2 hover:shadow-xl transition-shadow" data-testid={`news-card-${index}`}>
+            {news.slice(0, 6).map((item, index) => (
+              <Card key={index} className="glass-card border-2 hover:shadow-xl transition-all hover:scale-[1.02] overflow-hidden" data-testid={`news-card-${index}`}>
+                {item.image && (
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-40 object-cover"
+                    onError={(e) => e.target.style.display = 'none'}
+                  />
+                )}
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-3">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{item.summary}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                      item.category === 'Surf' || item.category === 'Surf Brasil' 
+                        ? 'bg-cyan-100 text-cyan-700' 
+                        : item.category === 'Bodyboard' 
+                          ? 'bg-orange-100 text-orange-700'
+                          : 'bg-blue-100 text-blue-700'
+                    }`}>
+                      {item.category === 'Surf' ? '🏄 Surf' : 
+                       item.category === 'Surf Brasil' ? '🇧🇷 Surf Brasil' :
+                       item.category === 'Bodyboard' ? '🏊 Bodyboard' : 
+                       '🤿 Mergulho'}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 line-clamp-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{item.summary}</p>
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline flex items-center gap-2"
+                    className="text-primary hover:underline flex items-center gap-2 font-medium"
                     data-testid={`news-link-${index}`}
                   >
                     Ler mais <ExternalLink className="h-4 w-4" />
