@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, MapPin } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
