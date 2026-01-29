@@ -1,0 +1,207 @@
+.ocean-gradient {
+  background: linear-gradient(135deg, #14B8A6 0%, #0EA5E9 100%);
+}
+
+.sunset-gradient {
+  background: linear-gradient(135deg, #10B981 0%, #14B8A6 100%);
+}
+
+.sand-gradient {
+  background: linear-gradient(to bottom, #FFFFFF, #F0FDF4);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.timer-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.board-card {
+  transition: all 0.2s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.status-available {
+  border-color: #10B981;
+  border-width: 3px;
+}
+
+.status-rented {
+  border-color: #14B8A6;
+  border-width: 3px;
+}
+
+.status-paused {
+  border-color: #F59E0B;
+  border-width: 3px;
+}
+
+.status-overdue {
+  border-color: #EF4444;
+  border-width: 3px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.floating-navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 80rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(20, 184, 166, 0.3), rgba(16, 185, 129, 0.3));
+  backdrop-filter: blur(2px);
+}
+
+/* Bamboo Navbar Styles */
+.bamboo-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  border-bottom: 3px solid #10B981;
+}
+
+.bamboo-logo {
+  transition: transform 0.2s ease;
+}
+
+.bamboo-logo:hover {
+  transform: scale(1.05);
+}
+
+.bamboo-button {
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  border: 2px solid #14B8A6;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bamboo-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.bamboo-button:hover::before {
+  left: 100%;
+}
+
+.bamboo-button:hover {
+  background: linear-gradient(135deg, #14B8A6 0%, #10B981 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  border-color: #0D9488;
+}
+
+.bamboo-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.bamboo-button-primary {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+  color: white;
+  border: 2px solid #06B6D4;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(14, 165, 233, 0.4);
+}
+
+.bamboo-button-primary:hover {
+  background: linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.5);
+}
+
+.bamboo-button-cart {
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: white;
+  border: 2px solid #FBBF24;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+  position: relative;
+}
+
+.bamboo-button-cart:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.bamboo-mobile-menu {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid #10B981;
+}
+
+/* Subtle texture for depth */
+.bamboo-navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 50px,
+    rgba(16, 185, 129, 0.02) 50px,
+    rgba(16, 185, 129, 0.02) 52px
+  );
+  pointer-events: none;
+}

@@ -1,0 +1,125 @@
+{
+  "identity": {
+    "name": "tabatinga2surf",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Vibrant, Tropical, Functional, Energetic",
+    "theme": "light"
+  },
+  "typography": {
+    "headings": {
+      "fontFamily": "Fredoka, sans-serif",
+      "weights": ["400", "600", "700"],
+      "usage": "All section titles, hero text, and major calls to action. Use tight tracking."
+    },
+    "body": {
+      "fontFamily": "Outfit, sans-serif",
+      "weights": ["300", "400", "500", "700"],
+      "usage": "Paragraphs, UI elements, dashboard data, and forms."
+    },
+    "instructions": "Import fonts from Google Fonts: https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap"
+  },
+  "colors": {
+    "palette": {
+      "background": "#FFFBEB",
+      "foreground": "#0F172A",
+      "primary": "#0EA5E9",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#F59E0B",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#14B8A6",
+      "accent_foreground": "#FFFFFF",
+      "muted": "#F1F5F9",
+      "muted_foreground": "#64748B",
+      "card": "#FFFFFF",
+      "card_foreground": "#0F172A",
+      "border": "#E2E8F0",
+      "input": "#E2E8F0",
+      "ring": "#0EA5E9"
+    },
+    "dashboard_status": {
+      "available": "#22C55E",
+      "rented": "#3B82F6",
+      "paused": "#F59E0B",
+      "overdue": "#EF4444"
+    },
+    "gradients": {
+      "ocean": "linear-gradient(135deg, #0EA5E9 0%, #14B8A6 100%)",
+      "sunset": "linear-gradient(135deg, #F59E0B 0%, #EF4444 100%)",
+      "sand": "linear-gradient(to bottom, #FFFBEB, #FFFFFF)"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "type": "Marketing",
+      "grid": "Tetris Grid (Mode A)",
+      "spacing": "Generous (p-12 to p-24)",
+      "features": [
+        "Hero Section: Full width image with 'Glassmorphism' overlay for text.",
+        "Gallery: Asymmetric grid (bento style) mixing landscape and portrait shots.",
+        "News Ticker: 'Editorial Ribbon' style for surf conditions."
+      ]
+    },
+    "dashboard": {
+      "type": "High Density",
+      "grid": "Mode B (Dense)",
+      "structure": "grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4",
+      "features": [
+        "20 Board Cards: Compact, status-color coded borders.",
+        "Timer Visibility: Large, monospace font for the countdown.",
+        "Quick Actions: Play/Pause/Stop buttons visible on hover."
+      ]
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or Soft Rounded (rounded-xl)",
+      "animation": "hover:scale-105 active:scale-95 transition-all duration-200",
+      "shadow": "shadow-lg hover:shadow-xl shadow-primary/20"
+    },
+    "cards": {
+      "style": "Glassmorphism or Solid White with 'Sand' texture",
+      "border": "1px solid rgba(0,0,0,0.05)",
+      "shadow": "shadow-md hover:shadow-lg transition-shadow"
+    },
+    "inputs": {
+      "style": "rounded-lg border-2 border-muted focus:border-primary bg-white/50 backdrop-blur-sm"
+    },
+    "navigation": {
+      "style": "Floating Glass Navbar",
+      "classes": "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl rounded-full bg-white/80 backdrop-blur-md border border-white/20 shadow-lg z-50"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Use subtle noise overlay on the background to mimic sand texture.",
+    "icons": "Lucide React (default). Use 'Waves', 'Sun', 'Wind', 'Clock' heavily.",
+    "animations": {
+      "hover": "Gentle lift (-2px)",
+      "scroll": "Fade in up (framer-motion)",
+      "micro": "Buttons ripple on click"
+    }
+  },
+  "images": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1672147315568-f8a8a52ef0c5?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "alt": "Tropical beach Tabatinga"
+    },
+    "surfboards": [
+      "https://images.unsplash.com/photo-1565815149602-9e4fa6ea6d53?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1760349212773-2a5508b12444?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1746640636595-5ed7031e0c2f?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "action": [
+      "https://images.unsplash.com/photo-1644032708673-bfafa72efeba?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1729842865076-fd79db820082?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1600970188293-313e1f61beb0?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ]
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Use 'sonner' for all toast notifications.",
+    "Mobile-first responsiveness is critical for the dashboard.",
+    "Do not use 'Inter' font. Use the specified 'Fredoka' and 'Outfit'.",
+    "Dashboard cards must show status clearly via border color or background tint."
+  ]
+}
