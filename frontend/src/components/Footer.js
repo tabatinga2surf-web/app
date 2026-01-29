@@ -41,7 +41,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">tabatinga2surf</h3>
+            {settings?.logo_url ? (
+              <img src={settings.logo_url} alt="Logo" className="h-16 w-auto mb-4" data-testid="footer-logo" />
+            ) : (
+              <h3 className="text-xl font-bold mb-4">tabatinga2surf</h3>
+            )}
             <p className="text-muted-foreground mb-4">
               Sua loja de surf, bodyboard e mergulho em Tabatinga, Paraíba.
             </p>
