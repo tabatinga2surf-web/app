@@ -255,6 +255,24 @@ Volte sempre!
                   R$ {(rental.final_amount || 0).toFixed(2)}
                 </p>
               </div>
+
+              {/* PIX QR Code */}
+              {settings?.pix_qr_url && (
+                <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200" data-testid="receipt-pix-section">
+                  <p className="text-sm text-muted-foreground text-center mb-3">Pague via PIX</p>
+                  <div className="flex justify-center">
+                    <img
+                      src={settings.pix_qr_url}
+                      alt="QR Code PIX"
+                      className="w-48 h-48 object-contain border-2 border-blue-300 rounded-lg bg-white p-2"
+                      data-testid="receipt-pix-qr-code"
+                    />
+                  </div>
+                  <p className="text-xs text-center text-muted-foreground mt-3">
+                    Escaneie o QR Code acima para efetuar o pagamento
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* WhatsApp Button */}
