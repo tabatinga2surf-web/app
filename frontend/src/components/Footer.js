@@ -52,6 +52,16 @@ const Footer = () => {
                 Paraíba, Brasil
               </p>
             </div>
+            <a 
+              href="https://wa.me/5583996666411" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground hover:text-green-500 transition-colors mt-3"
+              data-testid="footer-whatsapp-link"
+            >
+              <Phone className="h-5 w-5 flex-shrink-0" />
+              <span className="text-sm font-medium">(83) 99666-6411</span>
+            </a>
           </div>
           
           <div>
