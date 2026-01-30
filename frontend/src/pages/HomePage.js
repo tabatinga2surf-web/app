@@ -420,6 +420,128 @@ const HomePage = () => {
         )}
       </section>
 
+      {/* Galeria Instagram */}
+      <section className="py-16 bg-gradient-to-b from-purple-50 to-pink-50" data-testid="instagram-gallery-section">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="p-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-xl">
+                <Instagram className="h-8 w-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold">Siga-nos no Instagram</h2>
+            </div>
+            <a 
+              href="https://instagram.com/bodyboardtabatinga2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:opacity-80 transition-opacity"
+              data-testid="instagram-profile-link"
+            >
+              @bodyboardtabatinga2
+            </a>
+            <p className="text-muted-foreground mt-2">Fotos e vídeos das melhores ondas de Tabatinga</p>
+          </div>
+
+          {/* Grid de Galeria Estilo Instagram */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {gallery.length > 0 ? (
+              gallery.slice(0, 8).map((item, index) => (
+                <a
+                  key={item.id || index}
+                  href="https://instagram.com/bodyboardtabatinga2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative aspect-square overflow-hidden rounded-xl bg-gray-100"
+                  data-testid={`gallery-item-${index}`}
+                >
+                  <img
+                    src={item.image_url}
+                    alt={item.title || `Foto ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-4 text-white">
+                      <Camera className="h-6 w-6" />
+                    </div>
+                  </div>
+                </a>
+              ))
+            ) : (
+              // Placeholder images quando não há galeria cadastrada
+              [...Array(8)].map((_, index) => (
+                <a
+                  key={index}
+                  href="https://instagram.com/bodyboardtabatinga2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative aspect-square overflow-hidden rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600"
+                  data-testid={`gallery-placeholder-${index}`}
+                >
+                  <img
+                    src={`https://images.unsplash.com/photo-${[
+                      '1502680390469-be75c86b636f',
+                      '1507525428034-b723cf961d3e',
+                      '1455729552865-3658a5d39692',
+                      '1519046904884-53103b34b206',
+                      '1509233725247-49e657c54213',
+                      '1544551763-46a013bb70d5',
+                      '1559827291-9e2d2a43e2eb',
+                      '1505142468610-359e7d316be0'
+                    ][index]}?w=400&h=400&fit=crop`}
+                    alt={`Surf ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-4 text-white">
+                      {index % 3 === 0 ? <Play className="h-8 w-8" /> : <Camera className="h-6 w-6" />}
+                    </div>
+                  </div>
+                  {index % 3 === 0 && (
+                    <div className="absolute top-2 right-2">
+                      <Play className="h-5 w-5 text-white drop-shadow-lg" />
+                    </div>
+                  )}
+                </a>
+              ))
+            )}
+          </div>
+
+          {/* Botão para Ver Mais */}
+          <div className="text-center mt-8">
+            <a
+              href="https://instagram.com/bodyboardtabatinga2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                size="lg" 
+                className="rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:opacity-90 text-white border-0"
+                data-testid="instagram-follow-button"
+              >
+                <Instagram className="mr-2 h-5 w-5" />
+                Ver mais no Instagram
+              </Button>
+            </a>
+          </div>
+
+          {/* Stats do Instagram */}
+          <div className="flex justify-center gap-8 mt-8">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-gray-800">500+</p>
+              <p className="text-sm text-muted-foreground">Publicações</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-gray-800">2.5K</p>
+              <p className="text-sm text-muted-foreground">Seguidores</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-gray-800">10+</p>
+              <p className="text-sm text-muted-foreground">Anos de ondas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="max-w-7xl mx-auto px-4 py-16" data-testid="news-section">
         <h2 className="text-3xl font-bold mb-2 text-center">Notícias do Mundo Aquático</h2>
         <p className="text-center text-muted-foreground mb-8">Surf, Bodyboard e Mergulho</p>
