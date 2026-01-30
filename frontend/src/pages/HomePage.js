@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sun, Wind, Droplets, Waves, ExternalLink, TrendingUp, TrendingDown, Compass, Thermometer, CloudRain, Sunrise, Sunset, Navigation } from "lucide-react";
+import { Sun, Wind, Droplets, Waves, ExternalLink, TrendingUp, TrendingDown, Compass, Thermometer, CloudRain, Sunrise, Sunset, Navigation, Instagram, Play, Camera } from "lucide-react";
 import { toast } from "sonner";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
