@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -20,30 +20,47 @@ code {
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 222 47% 11%;
+        /* Background - Warm cream like sunset sky */
+        --background: 40 100% 97%;
+        --foreground: 220 40% 13%;
+        
+        /* Cards */
         --card: 0 0% 100%;
-        --card-foreground: 222 47% 11%;
+        --card-foreground: 220 40% 13%;
         --popover: 0 0% 100%;
-        --popover-foreground: 222 47% 11%;
-        --primary: 168 76% 42%;
+        --popover-foreground: 220 40% 13%;
+        
+        /* Primary - Vibrant Orange/Sunset */
+        --primary: 25 95% 53%;
         --primary-foreground: 0 0% 100%;
-        --secondary: 142 76% 36%;
+        
+        /* Secondary - Ocean Blue */
+        --secondary: 199 89% 48%;
         --secondary-foreground: 0 0% 100%;
-        --accent: 199 89% 48%;
+        
+        /* Accent - Tropical Teal */
+        --accent: 174 72% 46%;
         --accent-foreground: 0 0% 100%;
-        --muted: 210 40% 96%;
-        --muted-foreground: 215 16% 47%;
+        
+        /* Muted */
+        --muted: 40 30% 94%;
+        --muted-foreground: 220 15% 45%;
+        
+        /* Destructive - Red */
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 98%;
-        --border: 214 32% 91%;
-        --input: 214 32% 91%;
-        --ring: 168 76% 42%;
+        
+        /* Borders */
+        --border: 35 30% 85%;
+        --input: 35 30% 85%;
+        --ring: 25 95% 53%;
         --radius: 0.75rem;
-        --chart-1: 168 76% 42%;
-        --chart-2: 142 76% 36%;
-        --chart-3: 199 89% 48%;
-        --chart-4: 262 52% 47%;
+        
+        /* Charts */
+        --chart-1: 25 95% 53%;
+        --chart-2: 199 89% 48%;
+        --chart-3: 174 72% 46%;
+        --chart-4: 45 93% 58%;
         --chart-5: 340 82% 52%;
     }
 }
@@ -56,7 +73,8 @@ code {
         @apply bg-background text-foreground;
     }
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: 600;
     }
 }
 
