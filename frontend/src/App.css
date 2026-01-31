@@ -1,13 +1,18 @@
+/* Gradient backgrounds inspired by logo colors */
 .ocean-gradient {
-  background: linear-gradient(135deg, #14B8A6 0%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
 }
 
 .sunset-gradient {
+  background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
+}
+
+.tropical-gradient {
   background: linear-gradient(135deg, #10B981 0%, #14B8A6 100%);
 }
 
 .sand-gradient {
-  background: linear-gradient(to bottom, #FFFFFF, #F0FDF4);
+  background: linear-gradient(to bottom, #FFFBEB, #FEF3C7);
 }
 
 .glass-card {
@@ -28,27 +33,32 @@
 
 .board-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.2);
 }
 
+/* Status colors - vibrant */
 .status-available {
   border-color: #10B981;
   border-width: 3px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(255, 255, 255, 1));
 }
 
 .status-rented {
-  border-color: #14B8A6;
+  border-color: #F97316;
   border-width: 3px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(255, 255, 255, 1));
 }
 
 .status-paused {
-  border-color: #F59E0B;
+  border-color: #FBBF24;
   border-width: 3px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(255, 255, 255, 1));
 }
 
 .status-overdue {
   border-color: #EF4444;
   border-width: 3px;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(255, 255, 255, 1));
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -72,25 +82,25 @@
   backdrop-filter: blur(16px);
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
   z-index: 50;
 }
 
 .hero-overlay {
-  background: linear-gradient(to bottom, rgba(20, 184, 166, 0.3), rgba(16, 185, 129, 0.3));
+  background: linear-gradient(to bottom, rgba(249, 115, 22, 0.2), rgba(14, 165, 233, 0.3));
   backdrop-filter: blur(2px);
 }
 
-/* Bamboo Navbar Styles */
+/* Bamboo Navbar Styles - Sunset Theme */
 .bamboo-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15);
   z-index: 50;
-  border-bottom: 3px solid #10B981;
+  border-bottom: 3px solid #F97316;
 }
 
 .bamboo-logo {
@@ -101,16 +111,17 @@
   transform: scale(1.05);
 }
 
+/* Primary Button - Sunset Orange */
 .bamboo-button {
   padding: 0.5rem 1.25rem;
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
   color: white;
-  border: 2px solid #14B8A6;
-  border-radius: 10px;
+  border: 2px solid #FB923C;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -134,23 +145,24 @@
 }
 
 .bamboo-button:hover {
-  background: linear-gradient(135deg, #14B8A6 0%, #10B981 100%);
+  background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-  border-color: #0D9488;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.5);
+  border-color: #EA580C;
 }
 
 .bamboo-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 6px rgba(249, 115, 22, 0.3);
 }
 
+/* Secondary Button - Ocean Blue */
 .bamboo-button-primary {
   padding: 0.5rem 1.5rem;
   background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
   color: white;
-  border: 2px solid #06B6D4;
-  border-radius: 10px;
+  border: 2px solid #38BDF8;
+  border-radius: 12px;
   font-weight: 700;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -158,37 +170,38 @@
 }
 
 .bamboo-button-primary:hover {
-  background: linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(14, 165, 233, 0.5);
 }
 
+/* Cart Button - Golden Yellow */
 .bamboo-button-cart {
   padding: 0.5rem;
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
   color: white;
-  border: 2px solid #FBBF24;
-  border-radius: 10px;
+  border: 2px solid #FCD34D;
+  border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.4);
   position: relative;
 }
 
 .bamboo-button-cart:hover {
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  background: linear-gradient(135deg, #FCD34D 0%, #FBBF24 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.5);
 }
 
 .bamboo-mobile-menu {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border: 2px solid #10B981;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.2);
+  border: 2px solid #F97316;
 }
 
-/* Subtle texture for depth */
+/* Tropical texture overlay */
 .bamboo-navbar::after {
   content: '';
   position: absolute;
@@ -199,9 +212,33 @@
   background: repeating-linear-gradient(
     90deg,
     transparent,
-    transparent 50px,
-    rgba(16, 185, 129, 0.02) 50px,
-    rgba(16, 185, 129, 0.02) 52px
+    transparent 80px,
+    rgba(249, 115, 22, 0.03) 80px,
+    rgba(249, 115, 22, 0.03) 82px
   );
   pointer-events: none;
+}
+
+/* Custom scrollbar with sunset colors */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FEF3C7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F97316, #FB923C);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #EA580C, #F97316);
+}
+
+/* Vibrant selection */
+::selection {
+  background: rgba(249, 115, 22, 0.3);
+  color: #1E293B;
 }
